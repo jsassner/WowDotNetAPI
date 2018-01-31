@@ -135,5 +135,13 @@ namespace WowDotNetAPI.Test
             List<GuildMember> guildMembers = guild2.Members.Where(x => x.Character.Name.Equals("Danishpala", StringComparison.CurrentCultureIgnoreCase)).ToList();
             Assert.AreEqual(0, guildMembers.Count(x => !x.Character.Realm.Equals(x.Character.GuildRealm)));
         }
+
+	    [TestMethod]
+        public void Get_Guild_With_Void_Elf_Character() {
+            WowExplorer explorer2 = new WowExplorer(Region.EU, Locale.en_GB, APIKey);
+            Guild guild2 = explorer2.GetGuild("argent dawn", "the chosen", GuildOptions.GetMembers);
+            var guildMember = guild2.Members.FirstOrDefault(x => x.Character.Name.Equals("Odd", StringComparison.CurrentCultureIgnoreCase));
+            Assert.IsTrue(guildMember != null && guildMember.Character.Race == CharacterRace.VOID_ELF);
+        }
     }
 }

@@ -40,7 +40,11 @@ namespace WowDotNetAPI.Models
         WORGEN = 22,
         PANDAREN_NEUTRAL = 24,
         PANDAREN_ALLIANCE = 25,
-        PANDAREN_HORDE = 26
+        PANDAREN_HORDE = 26,
+	    NIGHTBORNE = 27,
+	    HIGHMOUNTAIN_TAUREN = 28,
+	    VOID_ELF = 29,
+	    LIGHTFORGED_DRAENEI = 30
     }
 
     [DataContract]

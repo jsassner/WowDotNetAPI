@@ -40,3 +40,4 @@ _ReSharper*/
 [Bb]uild/
 *.nupkg
 /.vs/WowDotNetAPI/v15/sqlite3
+/.vs
