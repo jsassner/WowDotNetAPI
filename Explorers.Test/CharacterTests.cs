@@ -418,5 +418,15 @@ namespace WowDotNetAPI.Test
 			Assert.IsTrue(briandek.Items.MainHand.ArtifactId > 0);
 			Assert.IsTrue(briandek.Items.MainHand.Relics.Any());
 		}
+
+        [TestMethod]
+        public void Get_Azerite_Level() {
+            var briandek = explorer.GetCharacter(Realm, CharacterName, CharacterOptions.GetEverything);
+
+            Assert.IsNotNull(briandek.Items);
+            Assert.IsTrue(briandek.Items.Neck.AzeriteItem.AzeriteLevel >= 0);
+            Assert.IsTrue(briandek.Items.Neck.AzeriteItem.AzeriteExperience >= 0);
+            Assert.IsTrue(briandek.Items.Neck.AzeriteItem.AzeriteExperienceRemaining >= 0);
+        }
 	}
 }

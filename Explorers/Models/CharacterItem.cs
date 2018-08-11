@@ -46,6 +46,13 @@ namespace WowDotNetAPI.Models
 		[DataMember(Name = "relics")]
 		public IEnumerable<CharacterItemRelic> Relics { get; set; }
 
+        // BFA
+        [DataMember(Name = "azeriteItem")]
+        public CharacterItemAzerite AzeriteItem { get; set; }
+
+        [DataMember(Name = "azeriteEmpoweredItem")]
+        public IEnumerable<CharacterItemAzeriteEmpoweredItem> AzeriteEmpoweredItems { get; set; }
+
         public override string ToString()
         {
             return string.Format("{0}", Name);

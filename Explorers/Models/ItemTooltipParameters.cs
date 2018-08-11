@@ -7,14 +7,14 @@ using System.Runtime.Serialization;
 namespace WowDotNetAPI.Models
 {
     [DataContract]
-	public class ItemTooltipParameters 
-	{
+    public class ItemTooltipParameters
+    {
         [DataMember(Name="gem0")]
         public int Gem0 { get; set; }
-        
+
         [DataMember(Name = "gem1")]
         public int Gem1 { get; set; }
-        
+
         [DataMember(Name = "gem2")]
         public int Gem2 { get; set; }
 
@@ -37,6 +37,21 @@ namespace WowDotNetAPI.Models
         public int Suffix { get; set; }
 
         [DataMember(Name = "upgrade")]
-		public ItemUpgrade ItemUpgrade { get; set; }
-	}
+        public ItemUpgrade ItemUpgrade { get; set; }
+
+        [DataMember(Name = "azeritePower0")]
+        public int AzeritePower0 { get; set; }
+
+        [DataMember(Name = "azeritePower1")]
+        public int AzeritePower1 { get; set; }
+
+        [DataMember(Name = "azeritePower2")]
+        public int AzeritePower2 { get; set; }
+
+        [DataMember(Name = "azeritePower3")]
+        public int AzeritePower3 { get; set; }
+
+        [DataMember(Name = "azeritePowerLevel")]
+        public int AzeritePowerLevel { get; set; }
+    }
 }
