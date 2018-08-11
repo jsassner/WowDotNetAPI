@@ -36,6 +36,7 @@ namespace WowDotNetAPI.Utilities
         public static T FromJSON<T>(string url) where T : class
         {
             HttpWebRequest req = WebRequest.Create(url) as HttpWebRequest;
+	        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             return FromJSON<T>(req);
         }
 
